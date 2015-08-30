@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC
+"-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN"
+"http://getahead.org/dwr/dwr20.dtd">
+<dwr>
+	<allow>
+		<!-- javascript 可呼叫的Java類別名稱 -->
+		<create creator="new" javascript="MidLayer">
+			<param name="class" value="example.MidLayer" />
+			<!-- javascript 可呼叫的方法 -->
+			<include method="getHouseList" />
+		</create>
+		<!-- 在Java和javascript之間傳送的物件型別 -->
+		<convert converter="bean" match="example.Criterion" />
+		<convert converter="bean" match="example.House" />
+	</allow>
+</dwr>
